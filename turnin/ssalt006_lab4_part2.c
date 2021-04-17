@@ -67,6 +67,10 @@ switch(SM2_State) { // Transitions
          else if (A0 && A1) {
             SM2_State = SM2_Reset;
          }
+
+	 else if ( A0 && !A1 ){
+	    SM2_State = SM2_Increment;
+	 }
          break;
 
       case SM2_ReadyButton:
@@ -108,6 +112,11 @@ switch(SM2_State) { // Transitions
          else if (A0 && A1) {
             SM2_State = SM2_Reset;
          }
+
+	 else if (!A0 && A1){
+	    SM2_State = SM2_Decrement;
+
+	 }
          break;
 
       default:
