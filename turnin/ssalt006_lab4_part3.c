@@ -110,7 +110,6 @@ int main(void) {
          break;
 
       case SM1_waitAction:
-	 PORTB = 0x00;
          break;
 
       case SM1_poundPressed:
@@ -124,7 +123,7 @@ int main(void) {
          break;
 
       case SM1_LockDoor:
-         PORTB = (PORTB & 0x00) | 0x80;
+         PORTB = (PORTB & 0x00) | 0x00;
          break;
 
       default: // ADD default behaviour below
