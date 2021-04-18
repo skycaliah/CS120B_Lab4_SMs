@@ -110,6 +110,7 @@ int main(void) {
          break;
 
       case SM1_waitAction:
+	 PORTB = 0x00;
          break;
 
       case SM1_poundPressed:
